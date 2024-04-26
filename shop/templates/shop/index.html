@@ -27,7 +27,8 @@
         bottom: 0;
     }
 
-    body .carousel-control-prev-icon body .carousel-control-next-icon {
+    body .carousel-control-prev-icon,
+    body .carousel-control-next-icon {
         background-color: blue;
     }
 
@@ -98,12 +99,12 @@
     <div class="container">
         <div id="demo" class="carousel slide my-3" data-ride="carousel">
             <ul class="carousel-indicators">
-                <li data-bs-target="#demo" data-bs-slide-to="0" class="active"></li>
-                <li data-bs-target="#demo" data-bs-slide-to="1"></li>
-                <li data-bs-target="#demo" data-bs-slide-to="2"></li>
+                <li data-bs-target="#demo" aria-label="Slide 1" data-bs-slide-to="0" aria-current="true" class="active"></li>
+                <li data-bs-target="#demo" aria-label="Slide 2" data-bs-slide-to="1"></li>
+                <li data-bs-target="#demo" aria-label="Slide 3" data-bs-slide-to="2"></li>
             </ul>
 
-            <div class="carousel-inner">
+            <div class="carousel-inner no-padding">
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-xs-3 col-sm-3 col-md-3">
