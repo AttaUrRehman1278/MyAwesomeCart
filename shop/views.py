@@ -15,7 +15,7 @@ def product(request):
     context = {
         'product_data':product_data
     }
-    return render(request , 'shop/index.html', context)
+    return render(request , 'shop/product.html', context)
 
 def contact(request):
     return HttpResponse("This is contact us")
