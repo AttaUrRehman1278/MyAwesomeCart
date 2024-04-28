@@ -1,9 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .models import Product
 
 # Create your views here.
+
 def index(request):
-    return render(request, 'shop/index.html')
+    product_data = Product.objects.all()
+    context = {
+        'product_data':product_data
+    }
+    return render(request , 'shop/index.html', context)
 
 def about(request):
     return HttpResponse("This is about")
