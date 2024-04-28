@@ -5,14 +5,17 @@ from .models import Product
 # Create your views here.
 
 def index(request):
+    return render(request, 'shop/index.html')
+
+def about(request):
+    return HttpResponse('This is about page')
+
+def product(request):
     product_data = Product.objects.all()
     context = {
         'product_data':product_data
     }
     return render(request , 'shop/index.html', context)
-
-def about(request):
-    return HttpResponse("This is about")
 
 def contact(request):
     return HttpResponse("This is contact us")
