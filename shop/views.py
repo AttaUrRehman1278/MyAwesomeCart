@@ -8,8 +8,7 @@ def index(request):
     return render(request, 'shop/index.html')
 
 def about(request):
-    return HttpResponse('This is about page')
-
+    return render(request, 'shop/about.html')
 def product(request):
     product_data = Product.objects.all()
     context = {
