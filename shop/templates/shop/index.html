@@ -51,8 +51,9 @@ body .no-padding {
         <ul class="carousel-indicators">
             <li data-bs-target="#demo" aria-label="Slide 1" data-bs-slide-to="0" aria-current="true" class="active">
             </li>
-            <li data-bs-target="#demo" aria-label="Slide 2" data-bs-slide-to="1"></li>
-            <li data-bs-target="#demo" aria-label="Slide 3" data-bs-slide-to="2"></li>
+            {% for i in range %}
+            <li data-bs-target="#demo" aria-label="Slide 2" data-bs-slide-to="{{i}}"></li>
+            {% endfor%}
         </ul>
 
         <div class="carousel-inner no-padding">
